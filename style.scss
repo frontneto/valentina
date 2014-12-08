@@ -1,0 +1,51 @@
+// basic reset
+* { 
+	margin: 0; 
+	padding: 0; 
+	outline: none; 
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+// basic font
+body { 
+	font-weight: normal; 
+	font-family: Arial; 
+	font-size: 14px;
+	h1 { font-size: 32px }
+	h2 { font-size: 26px }
+	h3 { font-size: 22px }
+	h4 { font-size: 18px }
+}
+
+// basic colors
+body {
+	background-color: #222;
+	a { color: #333; }
+	a:hover { color: #444; }
+	::selection, ::-moz-selection { 
+		background-color: #555;
+		color: #788;
+	}
+}
+
+// html semantics and tools
+body {
+	ul { list-style: none; } 
+	ul li { float: left; }
+	// img:hover {-webkit-filter: brightness(110%); }
+}
+
+// CSS nerd functions goes here
+@mixin radius ($radius: 5px) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin transition($time: 0.35s){
+    -webkit-transition: all $time ease;
+    -moz-transition: all $time ease;
+    -o-transition: all $time ease;
+    transition: all $time ease;
+}
